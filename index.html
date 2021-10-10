@@ -9,6 +9,7 @@
             src="https://kit.fontawesome.com/c8e4d183c2.js"
             crossorigin="anonymous"
         ></script>
+        <script src="main.js"></script>
     </head>
     <body>
         <nav>
@@ -23,8 +24,8 @@
                 <li><a href="Horror.html">Horror</a></li>
             </ul>
             <div class="search">
-                <input id="search" type="text" placeholder="Find Your Favourite Movies" />
-                <i class="fas fa-search"></i>
+                <input onchange="search()"  id="search" type="text" placeholder="Find Your Favourite Movies" />
+                <i  class="fas fa-search"></i>
             </div>
         </nav>
          <div id="allMoviesDiv">
@@ -32,33 +33,7 @@
             <h1 class="showcase-heading">Suggested Movies</h1>
 
             <ul id="autoWidth" class="cs-hidden">
-                <li class="item-a">
-                 
-                    <div class="showcase-box">
-                        <img src="images/s-1.jpg" />
-                    </div>
-                </li>
-            
-                <li class="item-b">
-                
-                    <div class="showcase-box">
-                        <img src="images/s-2.jpg" />
-                    </div>
-                </li>
-             
-                <li class="item-c">
-                
-                    <div class="showcase-box">
-                        <img src="images/s-3.jpg" />
-                    </div>
-                </li>
-              
-                <li class="item-d">
-                  
-                    <div class="showcase-box">
-                        <img src="images/s-4.jpg" />
-                    </div>
-                </li>
+               
             </ul>
         </section>
         <section id="latest">
@@ -82,7 +57,7 @@
                         </div>
                         <div class="latest-b-text">
                             <strong>Peninsula</strong>
-                            <p>Action Movie</p>
+                            <p>Action Adventure Movie</p>
                         </div>
                     </div>
                 </li>
@@ -93,7 +68,7 @@
                         </div>
                         <div class="latest-b-text">
                             <strong>Inception</strong>
-                            <p>Action Movie</p>
+                            <p>Omnious Movie</p>
                         </div>
                     </div>
                 </li>
@@ -104,7 +79,7 @@
                         </div>
                         <div class="latest-b-text">
                             <strong>IRON MAN 3</strong>
-                            <p>Action Movie</p>
+                            <p>Action Science-fiction Movie</p>
                         </div>
                     </div>
                 </li>
@@ -116,7 +91,7 @@
                         </div>
                         <div class="latest-b-text">
                             <strong>Venom</strong>
-                            <p>Action Movie</p>
+                            <p>Action Science-fiction Movie</p>
                         </div>
                     </div>
                 </li>
@@ -128,7 +103,7 @@
                         </div>
                         <div class="latest-b-text">
                             <strong>AQuaMan</strong>
-                            <p>Action Movie</p>
+                            <p>Action Science-fiction Movie</p>
                         </div>
                     </div>
                 </li>
@@ -180,7 +155,7 @@
                         </div>
                         <div class="latest-b-text">
                             <strong>Game Of Thrones</strong>
-                            <p>Action Tv Show</p>
+                            <p>Action Science-fiction Tv Show</p>
                         </div>
                     </div>
                 </li>
@@ -213,7 +188,7 @@
                         </div>
                         <div class="latest-b-text">
                             <strong>Better Call Saul</strong>
-                            <p>Action Tv Show</p>
+                            <p>Drama Tv Show</p>
                         </div>
                     </div>
                 </li>
@@ -235,7 +210,7 @@
                         </div>
                         <div class="latest-b-text">
                             <strong>Black Miror</strong>
-                            <p>Action Tv Show</p>
+                            <p>Action Science-fiction Tv Show</p>
                         </div>
                     </div>
                 </li>
@@ -423,6 +398,10 @@
                 </li>
 
                 </div>
-        
+                <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+                <script src="main.js"></script>
     </body>
 </html>

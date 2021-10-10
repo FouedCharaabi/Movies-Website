@@ -1,61 +1,32 @@
-movies = [
-    "inception",
-    "Game Of Thrones",
-    "Breaking Bad",
-    "Kin 2018",
-    "Peninsula",
-    "IRON MAN 3",
-    "Venom",
-    "AQuaMan",
-    "John Wick",
-    "The Tomorrow War",
-    "Peaky Blinders",
-    "Chernobyl",
-    "Better Call Saul",
-    "See",
-    "Black Miror",
-    "Banshee",
-    "The Karate Kid",
-    "Spider-man:Into The Spider Verse",
-    "The Dark Knight",
-    "The Dark Tower",
-    "The Revenant",
-    "Extraction",
-    "American Sniper",
-    "Fantastic Beast",
-    "Alive",
-    "Annabelle",
-    "Bird Box",
-    "Don't Breath",
-    "Army Of The Dead",
-    "The Purge",
-    "The Conjuring",
+var movies = [
+    { name: "godzella", src: "images/s-1.jpg" },
+    { name: "star wars", src: "images/s-2.jpg" },
+    { name: "beauty  and the beast", src: "images/s-3.jpg" },
+    { name: "ready player one ", src: "images/s-4.jpg" },
 ];
-function each(coll, func) {
-    if (Array.isArray(coll)) {
-        for (var i = 0; i < coll.length; i++) {
-            func(coll[i], i);
-        }
-    } else {
-        for (var key in coll) {
-            func(coll[key], key);
-        }
+
+function render(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        $("#autoWidth").append(`
+         <li class="item-a">
+                    <div class="showcase-box">
+                        <img src="${arr[i].src}" />
+                    </div>
+                </li>
+    `);
     }
 }
-function filter(array, predicate) {
-    var acc = [];
-    each(array, function (element) {
-        if (predicate(element)) {
-            acc.push(element);
+render(movies);
+
+function search() {
+    var name = $("#search").val();
+    var f = [];
+    for (var i = 0; i < movies.length; i++) {
+        if (movies[i].name.includes(name)) {
+            f.push(movies[i]);
         }
-    });
-    return acc;
-}
-function searchh() {
-    if ($("#search").val() === "John wick") {
-        $("allMoviesDiv").hide();
-        var x = $("<div><img src='images/m7-.jpg' /></div>");
-        x.appendTo("body");
     }
+    console.log(name, f);
+    $("#autoWidth").empty();
+    render(f);
 }
-$("#search").on("click", searchh());
